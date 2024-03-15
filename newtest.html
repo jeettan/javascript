@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testing html program</title>
+
+    <style>
+        h2{
+            font-family: Arial;
+            color: white;
+        }
+        </style>
+</head>
+<body>
+
+<h1>Random colour generator of 25 colors</h1>
+<h2 id="demo", font="Arial"></h2>
+
+<div id="demo2"></div>
+
+<script>
+
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+var colors = [" #412227","#DE4C8A","#00BB2D","#025669","#E1CC4F", "#A65E2E", "#35682D", " #8F8F8F", " #C1876B",  "#35682D","#B32821","#1E1E1E","#59351F","#E55137","#969992","#E1CC4F","#BDECB6","#A18594","#8A6642","#A65E2E","#6D6552","#A5A5A5","#412227","#AEA04B","#C6A664"]
+var color_name = ["Black Red", "Heather Violet", "Luminous Green", "Azure Blue","Ivory","Orange Brown","Grass Green","Grey Aluminium","Beige Red","Grass Green","Coral Red","Traffic Black","Fawn Brown ","Salmon Orange","Signal Grey","Ivory","Pastel Green","Bouquet","Brown Beige","Orange Brown","Beige Grey", "White Aluminium", "Black Red", "Orche Yellow", "Sand Yellow"]
+
+var count = randomIntFromInterval(0,25)
+
+document.addEventListener("click", function(){
+
+    count = randomIntFromInterval(0,25)
+
+    document.body.style.backgroundColor = colors[count]
+    document.getElementById('demo').innerHTML = colors[count] + " : " + color_name[count]
+/*
+    count += 1
+
+    if (count > colors.length - 1){
+        count = 0
+        console.log(count)
+    }
+    */
+})
+</script>
+
+</body>
+</html>
