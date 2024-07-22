@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+
+<head>
+
+
+<style>
+div {
+    padding-top: 10px
+    
+}
+
+.myClass input{
+    margin-right: 5px;
+}
+
+body{
+    padding:20px;
+    color:white;
+    font-family: Verdana;
+}
+
+#new-task-form input[type="text"]{
+flex: 1;
+  border: none;
+  background: white;
+  padding: 14px;
+  font-weight:14px;
+  color: black;
+}
+
+input[type="text"]:focus {
+    border:none;
+    outline: none;
+    background: transparent;
+}
+    
+    
+input[type="text"]{
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+#new-task-form input[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 14px 25px;
+    margin-right: 20px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tasklist2024{
+    background-color: rgba(0, 0, 0, 0.9);
+    width:300px;
+    height:120%;
+    padding:30px;
+    padding-right:10px;
+}
+
+#taskdashboard{
+    display: flex;
+    flex-direction:column;
+}
+
+#taskdashboard input[type="submit"]{
+    background-color: #39a53d; /* Green */
+    border: none;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.button2{
+    width: 13px; /* Adjust size as needed */
+    height: 13px; /* Adjust size as needed */
+    cursor: pointer; /* Show pointer cursor on hover */
+    padding-left: 35px;
+    margin-top: 35px; 
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="tasklist2024">
+
+<h1> Task List 2024</h1>
+
+<h2> Add new task</h2>
+<form id="new-task-form">
+<input type="text" id="new-task-input" placeholder="Enter task here"></input>
+<input type="submit" value="add"></input>
+</form>
+
+<h2> My tasks </h2>
+
+<div id="taskdashboard"></div></div>
+<script>
+
+function loadToDo(){
+
+    var y= localStorage.getItem("divine")
+    var storedNames = JSON.parse(y)
+
+    for(i=0; i< storedNames.length; i++){
+
+        var taskblock = document.querySelector("#taskdashboard");
+        var newDiv = document.createElement("div")
+        taskblock.appendChild(newDiv)
+
+        var x = document.createElement("input")
+        x.type = "text"
+        x.value = storedNames[i];
+        x.class = "divin";
+        x.setAttribute("readonly", true);
+
+        var y = document.createElement("input")
+        y.value = "edit";
+        y.type = "submit";
+
+        var z = document.createElement("input")
+        z.className = "button2";
+        z.type = "image";
+        z.src = "2.png"
+
+        newDiv.appendChild(x)
+        newDiv.appendChild(y)
+        newDiv.appendChild(z)
+
+        function Jkrowling(x, y,z,newDiv) {
+                y.addEventListener('click', function() {
+                    if (y.value === "edit") {
+                        x.removeAttribute("readonly");
+                        x.focus();
+                        y.value = "save";
+                    } else {
+                        x.setAttribute("readonly", true);
+                        y.value = "edit";
+                    }
+                });
+
+                x.addEventListener('keypress', (e) => {
+                if (e.key == "Enter"){
+                x.setAttribute("readonly", true)
+                y.value = "edit"
+                }})
+
+                z.addEventListener('click', (e)=>{
+                taskblock.removeChild(newDiv)
+            })
+        }Jkrowling(x,y,z,newDiv)}}
+
+ window.onload = () =>{
+
+   loadToDo();
+    
+    }
+
+    const form = document.querySelector("#new-task-form");
+    const input = document.querySelector("#new-task-input");
+    var taskblock = document.querySelector("#taskdashboard");
+
+    var storevariable = []
+    var count = 0;
+
+    form.addEventListener('submit', (e) => {
+
+        e.preventDefault();
+
+        const task = input.value
+
+        if(!task){
+            return;
+        }
+        var newDiv = document.createElement("div")
+        taskblock.appendChild(newDiv)
+        newDiv.id = count;
+
+        var x = document.createElement("input")
+        x.type = "text"
+        x.value = task;
+        x.id = "input" + count;
+        x.class = "divin";
+        storevariable.push(x.value)
+        x.setAttribute("readonly", true);
+
+        var y = document.createElement("input")
+        y.value = "edit";
+        y.className = "button1";
+        y.type = "submit";
+
+        var z = document.createElement("input")
+        z.className = "button2";
+        z.type = "image";
+        z.src = "2.png"
+
+        newDiv.appendChild(x)
+        newDiv.appendChild(y)
+        newDiv.appendChild(z)
+
+        e.target.reset();
+
+        count = count + 1;
+
+        y.addEventListener('click', (e)=>{
+
+        if(y.value == "edit"){
+            x.removeAttribute("readonly")
+            x.focus();
+            y.value = "save";
+
+        } else{
+            x.setAttribute("readonly", true);
+            y.value = "edit";
+
+        }
+        })
+
+        x.addEventListener('keypress', (e) => {
+            if (e.key == "Enter"){
+            x.setAttribute("readonly", true)
+            y.value = "edit"
+            /*
+            var k = e.target.parentNode.id;
+            var newx = document.getElementById("input" + k);
+            var kyc = newx.value;
+            storevariable[k] = kyc;
+            */
+            }
+        })
+
+        z.addEventListener('click', (e)=>{
+            taskblock.removeChild(newDiv)
+
+            })
+        })
+
+    function test() {
+
+     var array = []   
+    
+    var taskDivs = document.getElementById("taskdashboard").getElementsByTagName('div');
+    for (var i = 0; i < taskDivs.length; i++) {
+        var inputs = taskDivs[i].getElementsByTagName("input");
+        if (inputs.length > 0) {
+            var value = inputs[0].value;
+            array.push(value)
+        }
+    }
+
+    return array
+}
+
+    window.addEventListener('beforeunload', () => {
+           
+        var bulya = test()
+        
+        x = document.getElementById("taskdashboard").innerHTML
+        localStorage.setItem("outer", x);
+        localStorage.setItem("divine", JSON.stringify(bulya));
+
+    })
+
+
+</script>
+
+</body>
