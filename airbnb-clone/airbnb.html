@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+<head>
+
+    <title>AirBNB clone</title>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,
+opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Raleway:ital,wght@0,100
+..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;
+1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="topheader">
+        <a href=""><u>Welcome to Airbnb. Find the best places to stay in the world.</u></a>
+        </div>
+
+    <div class="sectiontwo">
+        <div class="linkbar">
+
+            <div id="airb"><a href="">
+            <svg width="30" height="32" fill="#FFFFFF">
+                <path
+                    d="M29.24 22.68c-.16-.39-.31-.8-.47-1.15l-.74-1.67-.03-.03c-2.2-4.8-4.55-9.68-7.04-14.48l-.1-.2c-.25-.47-.5-.99-.76-1.47-.32-.57-.63-1.18-1.14-1.76a5.3 5.3 0 00-8.2 0c-.47.58-.82 1.19-1.14 1.76-.25.52-.5 1.03-.76 1.5l-.1.2c-2.45 4.8-4.84 9.68-7.04 14.48l-.06.06c-.22.52-.48 1.06-.73 1.64-.16.35-.32.73-.48 1.15a6.8 6.8 0 007.2 9.23 8.38 8.38 0 003.18-1.1c1.3-.73 2.55-1.79 3.95-3.32 1.4 1.53 2.68 2.59 3.95 3.33A8.38 8.38 0 0022.75 32a6.79 6.79 0 006.75-5.83 5.94 5.94 0 00-.26-3.5zm-14.36 1.66c-1.72-2.2-2.84-4.22-3.22-5.95a5.2 5.2 0 01-.1-1.96c.07-.51.26-.96.52-1.34.6-.87 1.65-1.41 2.8-1.41a3.3 3.3 0 012.8 1.4c.26.4.45.84.51 1.35.1.58.06 1.25-.1 1.96-.38 1.7-1.5 3.74-3.21 5.95zm12.74 1.48a4.76 4.76 0 01-2.9 3.75c-.76.32-1.6.41-2.42.32-.8-.1-1.6-.36-2.42-.84a15.64 15.64 0 01-3.63-3.1c2.1-2.6 3.37-4.97 3.85-7.08.23-1 .26-1.9.16-2.73a5.53 5.53 0 00-.86-2.2 5.36 5.36 0 00-4.49-2.28c-1.85 0-3.5.86-4.5 2.27a5.18 5.18 0 00-.85 2.21c-.13.84-.1 1.77.16 2.73.48 2.11 1.78 4.51 3.85 7.1a14.33 14.33 0 01-3.63 3.12c-.83.48-1.62.73-2.42.83a4.76 4.76 0 01-5.32-4.07c-.1-.8-.03-1.6.29-2.5.1-.32.25-.64.41-1.02.22-.52.48-1.06.73-1.6l.04-.07c2.16-4.77 4.52-9.64 6.97-14.41l.1-.2c.25-.48.5-.99.76-1.47.26-.51.54-1 .9-1.4a3.32 3.32 0 015.09 0c.35.4.64.89.9 1.4.25.48.5 1 .76 1.47l.1.2c2.44 4.77 4.8 9.64 7 14.41l.03.03c.26.52.48 1.1.73 1.6.16.39.32.7.42 1.03.19.9.29 1.7.19 2.5z">
+                </path>
+            </svg>
+            <span>airbnb</span>
+        </a>
+        </div>
+
+        <div id="margin">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Locations</a></li>
+            <li><a href="">About Us</a></li>
+        </ul>
+    </div>
+
+        <div class="linkbar-right">
+
+            <a href=""><span id="becomehost">Become a host</span></a>
+            <div id="world">
+                <a href="">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"
+        style=" height: 16px; width: 16px; fill: white; position: relative; top: 2px;">
+        <path
+            d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z">
+        </path>
+    </svg>
+</a>
+</div>
+
+    <div id="combinesvg">
+
+    <a href="">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"
+        style=" fill: none; height: 16px; width: 16px; stroke: black; stroke-width: 3; overflow: visible; position: relative; bottom: 4px;">
+        <g fill="none" fill-rule="nonzero">
+            <path d="m2 16h28"></path>
+            <path d="m2 24h28"></path>
+            <path d="m2 8h28"></path>
+        </g>
+    </svg>
+
+    
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"
+        style="height: 29px; width: 29px; fill: currentcolor; position: relative; left: 6px; top:2px;">
+        <g fill="gray" fill-rule="nonzero">
+            <path
+                d="m16 .7c-8.437 0-15.3 6.863-15.3 15.3s6.863 15.3 15.3 15.3 15.3-6.863 15.3-15.3-6.863-15.3-15.3-15.3zm0 28c-4.021 0-7.605-1.884-9.933-4.81a12.425 12.425 0 0 1 6.451-4.4 6.507 6.507 0 0 1 -3.018-5.49c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5a6.513 6.513 0 0 1 -3.019 5.491 12.42 12.42 0 0 1 6.452 4.4c-2.328 2.925-5.912 4.809-9.933 4.809z">
+            </path>
+        </g>
+    </svg>
+</a>
+
+        </div>  <!-- div for combine svg -->
+
+        </div> <!-- div for linkbar right -->
+
+        </div> <!-- DIV for sectiontwo-->
+
+        <div class="bubble">
+
+        <div id="block">
+            <p>Location</p>
+            <input type="textbox" placeholder="Where are you going?"/>
+        </div>
+
+        <div id="block">
+            <p>Check-in</p>
+            <input type="textbox" placeholder="Date"/>
+        </div>
+
+        <div id="block">
+            <p>Check-out</p>
+            <input type="textbox" placeholder="Date"/>
+        </div>
+
+        <div id="block" style="border-right: none; padding: 10px 0px 10px 20px; width: 130px;">
+            <p>Guests</p>
+            <input type="number" placeholder="Add guests"/>
+        </div>
+
+     
+        <a href="">
+        <div id="search">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+        style="display:block;fill:none;height:16px;width:16px;stroke:white;stroke-width:4;overflow:visible;"
+        aria-hidden="true" role="presentation" focusable="false">
+        <g fill="none">
+            <path
+                d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9">
+            </path>
+        </g>
+    </svg>
+</div>
+</a>
+
+
+        </div> <!-- Bubble box end div -->
+        
+        <div class="plan-your-trip">
+        <h2> Plan Your Trip, <br> Nearby Places</h2>
+
+        <a href=""><button><b>Explore locations</b></button></a>
+
+    </div>
+
+    </div> 
+
+    <div class="gridbox">
+
+        <a href=""><div class="grid-item"><img src="images/locations/Locations-1.png" style="width: 65px; height: 65px; border-radius: 7px;"><div><b>Khao Yai</b><p>30 Minutes by Car</p></div></div></a>
+        <a href=""><div class="grid-item"><img src="images/locations/Locations-2.png" style="width: 65px; height: 65px; border-radius: 7px;"><div><b>Chiangrai</b><p>1 Hour by Car</p></div></div></a>
+        <a href=""><div class="grid-item"><img src="images/locations/Locations-3.png" style="width: 65px; height: 65px; border-radius: 7px;"><div><b>Samui</b><p>3.5 Hours by Car</p></div></div></a>
+        <a href=""><div class="grid-item"><img src="images/locations/Locations-4.png" style="width: 65px; height: 65px; border-radius: 7px;"><div><b>Samet</b><p>30 Minutes by Car</p></div></div></a>
+        <a href=""><div class="grid-item"><img src="images/locations/Location 5.png" style="width: 65px; height: 65px; border-radius: 7px;"><div><b>Pathum Thani</b><p>2 Hours by Car</p></div></div></a>
+        <a href=""><div class="grid-item"><img src="images/locations/Location-6.png" style="width: 65px; height: 65px; border-radius: 7px;"><div><b>Pattaya</b><p>45 Minutes by Car</p></div></div></a>
+        <a href=""><div class="grid-item"><img src="images/locations/Location-7.png" style="width: 65px; height: 65px; border-radius: 7px;"><div><b>Rayong</b><p>45 Minutes by Car</p></div></div></a>
+        <a href=""><div class="grid-item"><img src="images/locations/Location-8.png" style="width: 65px; height: 65px; border-radius: 7px;"><div><b>Chiang Mai</b><p>1 Hour by Car</p></div></div></a>
+    </div>
+
+    <div class="accomodations">
+
+        <h2>Accomodations</h2>
+
+        <div class="acc-grid">
+
+            <a href=""><div clas="acc-grid-items"><img src="images/accomodations/Accomodations-1.png"><h3>Houses</h3></div></a>
+            <a href=""><div clas="acc-grid-items"><img src="images/accomodations/Accomodations-2.png"><h3>Log Cabins & Country Houses</h3></div></a>
+            <a href=""><div clas="acc-grid-items"><img src="images/accomodations/Accomodations-3.png"><h3>Unique Spaces</h3></div></a>
+            <a href=""><div clas="acc-grid-items"><img src="images/accomodations/Accomodations-4.png"><h3>Hot Tubs</h3></div></a>
+
+        </div>
+    </div>
+
+    <div class="experiences">
+
+        <h2>Unique experiences and activities</h2>
+
+        <p>Meet with local experts.</p>
+
+        <div class="grid-exp">
+
+            <a href="">
+            <div class="grid-exp-item">
+            <img src="images/experiences/Virtual Experience.png"></img>
+            <p><b>Virtual Experience</b></p>
+            <p>Travel the world from home</p>
+        </div>
+    </a>
+
+    <a href="">
+        <div class="grid-exp-item">
+            <img src="images/experiences/Experience.png"></img>
+            <p><b>Experience</b></p>
+            <p>Experience from Anywhere!</p>
+        </div>
+    </a>
+
+    <a href="">
+        <div class="grid-exp-item">
+            <img src="images/experiences/Adventure.png"></img>
+            <p><b>Adventure</b></p>
+            <p>Multi-day trip with accomodations and meals</p>
+        </div>
+    </a>
+
+        </div>
+    </div>
+
+    <div class="community">
+
+        <h2> Be a part of the millions of Airbnb Host Community. </h2>
+
+        <div class="grid-exp">
+
+
+            <a href="">
+            <div class= "grid-comm-item">
+                <img src="images/community/Become a Hostel Host .png"></img>
+                <p><b>Become a hostel host</b></p>
+            </div>
+        </a>
+
+        <a href="">
+            <div class="grid-comm-item">
+                <img src="images/community/Host a Virtual Experience.png"></img>
+                <p><b>Host a virtual experience</b></p>
+            </div>
+        </a>
+
+        <a href="">
+            <div class="grid-comm-item">
+                <img src="images/community/Host Your Experience.png"></img>
+                <p><b>Host your experience</b></p>
+            </div>
+        </a>
+
+    </div>
+
+</div>
+
+<hr>
+
+<div class="bottom-footer">
+
+    <div class="flex-links">
+        <div class="flex-items">
+
+            <p><b>Introduce</b></p>
+            <p><a href="">Guide to Use AirBnB</a></p>
+            <p><a href="">Newsroom</a></p>
+            <p><a href="">Investor Information</a></p>
+            <p><a href="">AirBnB Plus</a></p>
+            <p><a href="">AirBnB Luxe</a></p>
+            <p><a href="">Hotel Tonight</a></p>
+            <p><a href="">Airbnb Business Program</a></p>
+            <p><a href="">Jobs</a></p>
+
+        </div>
+        <div class="flex-items">
+
+            <p><b>Community</b></p>
+            <p><a href="">Diversity</a></p>
+            <p><a href="">Accesibility</a></p>
+            <p><a href="">Airbnb Associate</a></p>
+            <p><a href="">Accomodation for Aid Workers</a></p>
+            <p><a href="">Invite Friends</a></p>
+            <p><a href="">Airbnb.org</a></p>
+
+        </div>
+
+        <div class="flex-items">
+            <p><b>To Host</b></p>
+            <p><a href="">Accomodation</a></p>
+            <p><a href="">Host a Virtual Experience</a></p>
+            <p><a href="">Responsible Hosting</a></p>
+            <p><a href="">Data center</a></p>
+            <p><a href="">Community Center</a></p>
+        </div>
+        <div class="flex-items">
+
+            <p><b>Airbnb Support</b></p>
+            <p><a href="">Airbnb's response to COVID-19</a></p>
+            <p><a href="">Help Center</a></p>
+            <p><a href="">Reservation Cancellation</a></p>
+            <p><a href="">Airbnb Neighbor Complaint Support</a></p>
+            <p><a href="">Trust and Safety</a></p>
+        </div>
+    </a>
+    </div>
+    <hr>
+
+    <div class="lastsection">
+
+    <div id="footer">
+    <p>© 2021 Airbnb, Inc. All rights reserved</p>
+    <a href=""><span>Privacy Policy</span></a> <span>·</span>
+    <a href=""><span>Terms of Service</span></a> <span>·</span>
+    <a href=""><span>Site Map</span> </a> <span>·</span>
+    <a href=""><span>Refund Policy</span> </a><span>·</span>
+    <a href=""><span>Company Details</span></a>
+</div>
+
+    <div id="flextwo">
+        <a href="">
+    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"
+        style=" height: 16px; width: 16px; fill: currentcolor; position: relative; top: 2px;">
+        <path
+            d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z">
+        </path>
+    </svg>
+<span><u><b>English(EN)</b></u></span></a>
+<a href=""><span><u><b>฿THB</b></u></span></a>
+
+</div>
+
+
+<div id="social-links">
+
+    <a href=""><img src="images/socials/FB.png"/></a>
+    <a href=""> <img src="images/socials/twitter.png"/></a>
+    <a href=""><img src="images/socials/images.png"/></a>
+
+
+</div>
+</div>
+</div>
+</body>
+</html>
+
