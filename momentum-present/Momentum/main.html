@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="icon" type="image/x-icon" href="./images/clock.svg">
+<link rel="stylesheet", href="todo.css">
+
+<!-- localStorage.clear();-->
+
+    <title>Momentum Clone, Keio University</title>
+
+</head>
+
+<body>
+    <div class="background-container" id="blur">
+    <div class="background-overlay"></div>
+
+        <div class="blockA" id="blockA"> 
+    <form>
+        <label id="hello1" for="textbox">Hi, What's your name? </label>
+        <input type="text" id="start" name="textbox"><br>
+        <label id="hello2" for="buttonX">Please enter your first name</label>
+        <button type="submit" class="btn btn-danger" id="functionxx">Submit</button>
+        <p id="hello"></p>
+    </form>
+    </div>
+    <div class="blockB" id="blockB"> <span id="span"> </span><br></div>
+    <div class="todolistapp" id="toggle2"> Todolist app</div>
+    <div id="weatherapplication"><span id="spin1" id="hidden"><img src="./images/clear-sky.png"></img></span><br><span id="spin2"></span></div>
+
+    <div id="motivationalquotes"><p style="font-size:25px"></p><p style="font-size:20px"> </p></div>
+    </div>
+
+    <div id="popup">
+        <h2>Task List 2024</h2>
+        <p id="addfirstname"> Welcome to your task buddy app, </p> 
+        <h2> Add new task</h2>
+        <form id="new-task-form">
+        <input type="text" id="new-task-input" placeholder="Enter task here"></input>
+        <input type="submit" value="add"></input>
+        </form>
+        <h2> My tasks </h2>
+    <div id="taskdashboard"></div>
+        <a href="#" id="toggle">Close</a>
+
+    <script src="todo.js"></script>
+
+</body>
+
+
+</html>

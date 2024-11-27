@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head></head>
+<body>
+    <button onclick="setlocal()">Set LocalStorage</button>
+    <button onclick="displaylocal()">Display LocalStorage</button>
+    <button onclick="deletelocal()">Delete LocalStorage</button>
+    <script>
+
+    var now = new Date()
+    const itemStr = localStorage.getItem("key")
+    const item = JSON.parse(itemStr)
+
+    if (now.getTime() > item.expiry) {
+		// If the item is expired, delete the item from storage
+		// and return null
+		localStorage.removeItem("key")
+		alert("local storage has elapsed time.")
+	}
+
+    function displaylocal(){
+
+        var x = localStorage.getItem("key")
+        var y = JSON.parse(x) 
+
+        alert(JSON.stringify(y.value))
+    }
+
+    function setlocal(){
+
+        const now = new Date()
+
+    const item = {
+        value: "3475",
+        expiry: now.getTime() + 20000
+}
+
+    localStorage.setItem("key", JSON.stringify(item))
+
+
+    }
+
+    function deletelocal(){
+
+        localStorage.clear()
+    }
+    </script>
+</body>
+</html>

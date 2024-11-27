@@ -1,0 +1,13 @@
+Features of whiteboard app
+
+1. Random changing background
+2. Takes your first name and saves it, print your first name when it gets out.
+3. Uses your desktop time to display current time in the middle of the screen
+4. Uses a custom font
+5. Puts a motivational quote in the bottom of the screen
+6. Top right - displays the temperature and your location
+7. bottom right - To do list app
+8. Top left - pomodoro app,
+9. Can use API to display background photos.
+10. Top left, a links tab. Stores links, add or remove link. 
+11. Finally add this to become a chrome extension.

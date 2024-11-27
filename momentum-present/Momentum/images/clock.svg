@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-clock" viewBox="-3 -3 22 22"><g id="deeditor_bgCarrier" stroke-width="0">
+  <rect id="dee_c_e" x="-3" y="-3" width="22" height="22" rx="38.4" fill="#00B4AB" strokewidth="0"/>
+</g>
+  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" fill="#ffffff"/>
+  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" fill="#ffffff"/>
+</svg>
