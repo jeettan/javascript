@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="styles.css">
+<title>Notepad++</title>
+
+<body>
+
+
+    <h2>Notepad++</h2>
+
+
+
+    <div class="container">
+
+        <div class="input">
+            <div class="header-input">
+                <img src="images/new.png" width="30px" onclick="addNote()">
+                <img src="images/x-mark.png" width="20px" onclick="deleteThing()">
+            </div>
+            <textarea id="t-area" rows="12" cols="55" maxlength="500"></textarea>
+        </div>
+        <button onclick="save()">Save</button>
+        <button onclick="clearStorage()">Clear data</button>
+        <hr>
+        <div class="note-dump"></div>
+    </div>
+    <script src="index.js"></script>
+
+</html>

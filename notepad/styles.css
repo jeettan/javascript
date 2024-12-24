@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 20px;
+  padding: 10px;
+  background-color: rgb(174, 182, 229);
+}
+
+hr {
+  border: 1px dotted black;
+}
+
+.input {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  background-color: yellow;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  margin: 25px;
+}
+
+button {
+  width: 110px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+textarea {
+  opacity: 0.6;
+  border: none;
+  resize: none;
+  padding: 10px;
+  overflow: none;
+  height: 230px;
+}
+
+.header-input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.header-input img {
+  cursor: pointer;
+}
+
+.note-dump {
+  display: flex;
+  margin: 30px;
+  gap: 5%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.note-item {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-item div img {
+  float: right;
+  margin: 10px;
+}
+
+.text-area-two {
+  padding: 10px;
+  background-color: rgb(255, 254, 182);
+  height: 85%;
+}
+
+.img-class {
+  cursor: pointer;
+}
