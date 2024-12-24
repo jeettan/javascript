@@ -1,205 +1,158 @@
-let one = document.getElementById('1');
-let two = document.getElementById('2');
-let three = document.getElementById('3');
-let four = document.getElementById('4');
-let five = document.getElementById('5');
-let six = document.getElementById('6');
-let seven = document.getElementById('7');
-let eight = document.getElementById('8');
-let nine = document.getElementById('9');
-let result = document.getElementById('result');
-let button = document.getElementById('reset');
+var textarea = document.getElementById('t-area');
+var note = document.getElementsByClassName('note-dump')[0];
 
-let turn = 1;
-let overallTurn = 0;
+function deleteThing() {
 
-var checked = {
-
-  1: "unchecked",
-  2: "unchecked",
-  3: "unchecked",
-  4: "unchecked",
-  5: "unchecked",
-  6: "unchecked",
-  7: "unchecked",
-  8: "unchecked",
-  9: "unchecked",
+    textarea.value = "";
 }
 
-function initializeGame() {
+function addNote() {
 
-  one.innerHTML = "";
-  two.innerHTML = "";
-  three.innerHTML = "";
-  four.innerHTML = "";
-  five.innerHTML = "";
-  six.innerHTML = "";
-  seven.innerHTML = "";
-  eight.innerHTML = "";
-  nine.innerHTML = "";
+    let img = document.createElement('img');
 
-  one.addEventListener('click', handleClick);
-  two.addEventListener('click', handleClick);
-  three.addEventListener('click', handleClick);
-  four.addEventListener('click', handleClick);
-  five.addEventListener('click', handleClick);
-  six.addEventListener('click', handleClick);
-  seven.addEventListener('click', handleClick);
-  eight.addEventListener('click', handleClick);
-  nine.addEventListener('click', handleClick);
+    img.src = "images/x-mark.png";
+    img.style.width = "20px";
+    img.style.height = "20px";
+    img.classList.add('img-class');
 
-}
+    img.addEventListener('click', function () {
 
-initializeGame();
+        var k = document.getElementsByClassName('note-dump')[0];
 
-button.addEventListener('click', function () {
+        var index = 0;
+        var result = this.parentElement.parentElement
 
-  initializeGame()
+        while (result != null) {
 
-  checked = {
+            result = result.previousSibling;
+            index++;
 
-    1: "unchecked",
-    2: "unchecked",
-    3: "unchecked",
-    4: "unchecked",
-    5: "unchecked",
-    6: "unchecked",
-    7: "unchecked",
-    8: "unchecked",
-    9: "unchecked",
-  }
+        }
 
-  result.textContent = ""
-  turn = 1;
-  overallTurn = 0;
+        k.removeChild(k.children[index - 1]);
+    })
 
-})
+    let newElement = document.createElement('div');
+    let newnewdiv = document.createElement('div');
+    let elementinelement = document.createElement('div');
+    elementinelement.classList.add('text-area-two');
+    elementinelement.innerText = textarea.value;
 
-function removeListenerAll() {
+    newnewdiv.appendChild(img);
+    newElement.appendChild(newnewdiv);
+    newElement.appendChild(elementinelement);
 
-  one.removeEventListener('click', handleClick);
-  two.removeEventListener('click', handleClick);
-  three.removeEventListener('click', handleClick);
-  four.removeEventListener('click', handleClick);
-  five.removeEventListener('click', handleClick);
-  six.removeEventListener('click', handleClick);
-  seven.removeEventListener('click', handleClick);
-  eight.removeEventListener('click', handleClick);
-  nine.removeEventListener('click', handleClick);
+    newElement.classList.add('note-item');
+    newElement.style.boxShadow = "1px 1px 1px rgba(0, 0, 0, 0.4)";
+    newElement.style.height = "250px";
+    newElement.style.width = "250px";
+    newElement.style.backgroundColor = "yellow";
+    note.appendChild(newElement);
 
 }
 
-function addCircleSquare(elementId) {
+function save() {
 
-  let img = document.createElement('img');
-  img.src = './images/circle.png';
-  img.style.width = "50px";
-  elementId.appendChild(img);
-}
+    window.localStorage.clear();
 
-function addX(elementId) {
+    try {
 
-  let img = document.createElement('img');
-  img.src = './images/x.png';
-  img.style.width = "50px";
-  elementId.appendChild(img);
-}
+        var k = document.getElementsByClassName('note-dump')[0];
+        var count = k.childElementCount;
 
-function handleClick() {
-  if (turn == 1) {
-    addCircleSquare(this);
-    turn = 2;
-    checked[this.id] = "o";
-    this.removeEventListener('click', handleClick);
-    overallTurn++;
-    checkWinCondition()
-  } else if (turn == 2) {
-    addX(this);
-    turn = 1;
-    checked[this.id] = "x";
-    this.removeEventListener('click', handleClick);
-    overallTurn++;
-    checkWinCondition()
-  }
-}
+        if (count == 0) {
 
-function checkWinCondition() {
+            window.localStorage.clear();
 
-  console.log(checked)
+        }
 
-  if (checked[1] == "o" && checked[2] == "o" && checked[3] == "o") {
+        for (i = 0; i < count; i++) {
 
-    removeListenerAll()
-    result.innerHTML = "O wins";
-  } else if (checked[4] == "o" && checked[5] == "o" && checked[6] == "o") {
+            var j = k.children[i].children[1].innerHTML;
+            var note = "note";
+            note = note + i;
+            localStorage.setItem(note, j);
+        }
 
-    removeListenerAll()
-    result.innerHTML = "O wins";
-  } else if (checked[7] == "o" && checked[8] == "o" && checked[9] == "o") {
+        console.log(localStorage)
+    } catch (err) {
 
-    removeListenerAll()
-    result.innerHTML = "O wins";
-  } else if (checked[1] == "o" && checked[4] == "o" && checked[7] == "o") {
-
-    removeListenerAll()
-    result.innerHTML = "O wins";
-  } else if (checked[5] == "o" && checked[2] == "o" && checked[8] == "o") {
-
-    removeListenerAll()
-    result.innerHTML = "O wins";
-  } else if (checked[3] == "o" && checked[6] == "o" && checked[9] == "o") {
-
-    removeListenerAll()
-    result.innerHTML = "O wins";
-  } else if (checked[1] == "o" && checked[5] == "o" && checked[9] == "o") {
-
-    removeListenerAll()
-    result.innerHTML = "O wins";
-  } else if (checked[3] == "o" && checked[5] == "o" && checked[7] == "o") {
-
-    removeListenerAll()
-    result.innerHTML = "O wins";
-  }
-
-  if (checked[1] == "x" && checked[2] == "x" && checked[3] == "x") {
-
-    removeListenerAll()
-    result.innerHTML = "X wins";
-  } else if (checked[4] == "x" && checked[5] == "x" && checked[6] == "x") {
-
-    removeListenerAll()
-    result.innerHTML = "X wins";
-  } else if (checked[7] == "x" && checked[8] == "x" && checked[9] == "x") {
-
-    removeListenerAll()
-    result.innerHTML = "X wins";
-  } else if (checked[1] == "x" && checked[4] == "x" && checked[7] == "x") {
-
-    removeListenerAll()
-    result.innerHTML = "X wins";
-  } else if (checked[5] == "x" && checked[2] == "x" && checked[8] == "x") {
-
-    removeListenerAll()
-    result.innerHTML = "x wins";
-  } else if (checked[3] == "x" && checked[6] == "x" && checked[9] == "x") {
-
-    removeListenerAll()
-    result.innerHTML = "X wins";
-  } else if (checked[1] == "x" && checked[5] == "x" && checked[9] == "x") {
-
-    removeListenerAll()
-    result.innerHTML = "X wins";
-  } else if (checked[3] == "x" && checked[5] == "x" && checked[7] == "x") {
-
-    removeListenerAll()
-    result.innerHTML = "X wins";
-  } else if (overallTurn == 9) {
-
-    console.log(overallTurn)
-    removeListenerAll()
-    result.innerHTML = "Draw";
-  }
+        console.log(err);
+    }
 
 }
 
+function clearStorage() {
 
+    window.localStorage.clear();
+
+    var k = document.getElementsByClassName('note-dump')[0];
+    k.innerHTML = "";
+}
+
+window.onload = function () {
+
+    var note1 = document.getElementsByClassName('note-dump')[0];
+
+
+    var note = "note";
+    var item = "";
+    var index = 0;
+
+    while (item != null) {
+
+        note = "note";
+        note = note + index;
+        item = localStorage.getItem(note);
+
+        if (item == null) {
+
+            break;
+        }
+
+        let img = document.createElement('img');
+
+        img.src = "images/x-mark.png";
+        img.style.width = "20px";
+        img.style.height = "20px";
+        img.classList.add('img-class');
+
+        img.addEventListener('click', function () {
+
+            var k = document.getElementsByClassName('note-dump')[0];
+
+            var index = 0;
+            var result = this.parentElement.parentElement
+
+            while (result != null) {
+
+                result = result.previousSibling;
+                index++;
+
+            }
+
+            k.removeChild(k.children[index - 1]);
+        })
+
+        let newElement = document.createElement('div');
+        let newnewdiv = document.createElement('div');
+        let elementinelement = document.createElement('div');
+        elementinelement.classList.add('text-area-two');
+        elementinelement.innerText = item;
+
+        newnewdiv.appendChild(img);
+        newElement.appendChild(newnewdiv);
+        newElement.appendChild(elementinelement);
+
+        newElement.classList.add('note-item');
+        newElement.style.boxShadow = "1px 1px 1px rgba(0, 0, 0, 0.4)";
+        newElement.style.height = "250px";
+        newElement.style.width = "250px";
+        newElement.style.backgroundColor = "yellow";
+        note1.appendChild(newElement);
+        index++;
+    }
+
+    console.log("onload")
+
+};
