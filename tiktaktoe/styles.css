@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  padding: 15px;
+}
+
+table {
+  table-layout: fixed;
+}
+
+td {
+  border: 2px solid black;
+  width: 40px;
+  height: 40px;
+  border-left: none;
+  border-top: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+tr td:last-child {
+  border-right: none;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+td {
+  padding: 30px;
+  font-size: 30px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  gap: 30px;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+}
