@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Monaco", sans-serif;
+}
+
+body {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.dead-black-pieces {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(6, 1fr);
+  height: 50%;
+}
+
+.dead-red-pieces {
+  height: 50%;
+  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 10px;
+}
+
+.dead-pieces {
+  display: flex;
+  margin-top: 30px;
+  width: 200px;
+  margin-left: 50px;
+  flex-direction: column;
+  flex: 1;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.game-board {
+  display: flex;
+  flex: 3;
+  margin-top: 50px;
+  flex-direction: column;
+  width: 80vw;
+  height: 70vh;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+}
+
+.checkers-blue {
+  background-color: #b7e3dc;
+}
+
+.checkers-white {
+  background-color: white;
+}
+
+.square {
+  width: 50.5px;
+  height: 50.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blackPiece {
+  height: 35px;
+  width: 35px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.redPiece {
+  height: 35px;
+  width: 35px;
+  background-color: darkred;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.selected {
+  outline: 2.5px solid rgb(128, 244, 128);
+}
+
+.doubleJump {
+  outline: 3px solid rgb(148, 255, 9);
+}
+
+.king {
+  background-image: url("crown.png");
+  background-position: center;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+}
