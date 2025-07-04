@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  padding: 15px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  cursor: pointer;
+}
+
+.tile img {
+  margin-left: 16px;
+  margin-top: 15px;
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+}
+
+.result {
+  height: 5px;
+}
+
+.right-border {
+  border-right: 0.2em solid black;
+}
+
+.border-bottom {
+  border-bottom: 0.2em solid black;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  gap: 30px;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+}
